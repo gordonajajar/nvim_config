@@ -39,12 +39,12 @@ Install WSL2(Windows Subsystem for Linux) and follow the Linux instructions.
 - [ripgrep](https://github.com/BurntSushi/riprep) (for telescope fuzzyfinder)
 - [Nerd Fonts](https://www.nerdfonts.com/) - e.g JetBrainsMono: 
 > ```sh
-> wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
-        >         && cd ~/.local/share/fonts \
-        >         && unzip JetBrainsMono.zip \
-        >         && rm JetBrainsMono.zip \
-        >         && fc-cache -fv
-        >         ```
+> wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip 
+> && cd ~/.local/share/fonts 
+> && unzip JetBrainsMono.zip
+> && rm JetBrainsMono.zip 
+> && fc-cache -fv
+> ```
 
 ## Install the config
 
@@ -62,5 +62,6 @@ also displayed in core/keymaps.lua.
 
 ## Acknowledgement
 - [Lazy.nvim](https://github.com/folke/lazy.nvim)
+- [sadiksaifi](https://github.com/sadiksaifi)
 
 
