@@ -29,8 +29,7 @@ brew install neovim
 | ------------ | ------- |
 | Arch Linux | `sudo pacman -S neovim` |
 | Fedora | `sudo dnf install neovim` |
-| Debian/Ubuntu | Neovim's 0.10 may not be available in Debian/Ubuntu's repositories. 
-  I recommend installing from source: [official repository](https://github.com/neovim/neovim/blob/master/INSTALL.md). |
+| Debian/Ubuntu | Neovim's 0.10 may not be available in Debian/Ubuntu's repositories. I recommend installing from source: [official repository](https://github.com/neovim/neovim/blob/master/INSTALL.md). |
 
 ### Windows
 Install WSL2(Windows Subsystem for Linux) and follow the Linux instructions.
@@ -40,12 +39,12 @@ Install WSL2(Windows Subsystem for Linux) and follow the Linux instructions.
 - [ripgrep](https://github.com/BurntSushi/riprep) (for telescope fuzzyfinder)
 - [Nerd Fonts](https://www.nerdfonts.com/) - e.g JetBrainsMono: 
 > ```sh
-wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
-         && cd ~/.local/share/fonts \
-         && unzip JetBrainsMono.zip \
-         && rm JetBrainsMono.zip \
-         && fc-cache -fv
-         ```
+> wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
+        >         && cd ~/.local/share/fonts \
+        >         && unzip JetBrainsMono.zip \
+        >         && rm JetBrainsMono.zip \
+        >         && fc-cache -fv
+        >         ```
 
 ## Install the config
 
