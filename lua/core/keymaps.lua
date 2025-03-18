@@ -1,4 +1,20 @@
 
+--leader key is space
+vim.g.mapleader = " "
+
+--NONE PLUGIN SPECIFIC PLUGINS:
+
+--bufferline
+vim.keymap.set("n", "<leader>n", ":bn<cr>")
+vim.keymap.set("n", "<leader>p", ":bp<cr>")
+vim.keymap.set("n", "<leader>x", ":bd<cr>")
+
+--window management
+vim.keymap.set("n", "<leader>sv", "<C-w>v")
+vim.keymap.set("n", "<leader>sh", "<C-w>s")
+vim.keymap.set("n", "<leader>se", "<C-w>=")
+vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>")
+
 --telescope
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>fz", ":Telescope live_grep<cr>")
@@ -10,7 +26,8 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<cr>")
 --comment
 vim.keymap.set("", "<leader>/", ":CommentToggle<cr>")
 
---See options.lua for my non-plugin keymaps.
+
+--PLUGIN-SPECIFIC KEYMAPS (defined in individual .luas in plugins/):
 --
 --Tmux
 --{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
