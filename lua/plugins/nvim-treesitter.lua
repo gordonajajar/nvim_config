@@ -1,11 +1,5 @@
 return {
     {
-        "neovim/nvim-lspconfig",
-        dependencies = { "saghen/blink.cmp" },
-        config = function()
-        end,
-    },
-    {
         "williamboman/mason.nvim",
         config = function()
             require("mason").setup()
@@ -16,11 +10,12 @@ return {
         dependencies = { "mason.nvim" },
         config = function()
             require("mason-lspconfig").setup()
-            require("mason-lspconfig").setup_handlers {
-                function (server_name) -- default handler (optional)
-                    require("lspconfig")[server_name].setup {}
-                end,
-            }
+        end,
+    },
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = { "saghen/blink.cmp" , "williamboman/mason.nvim", },
+        config = function()
         end,
     },
     {
@@ -28,7 +23,7 @@ return {
         config = function()
             require("nvim-treesitter.configs").setup({
                 -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-                ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+                ensure_installed = { "javascript", "tsx", "typescript", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
 
                 -- Install parsers synchronously (only applied to `ensure_installed`)
                 sync_install = false,
@@ -101,5 +96,5 @@ return {
     },
     {
         "nvim-treesitter/nvim-treesitter-textobjects",
-    }
+    },
 }

@@ -2,12 +2,18 @@
 --leader key is space
 vim.g.mapleader = " "
 
+-- LAZY PLUGIN MANAGER:
+-- do :Lazy
+
 --NONE PLUGIN SPECIFIC PLUGINS:
+
+--TOGGLE WRAP: <c-w>
 
 --bufferline
 vim.keymap.set("n", "<leader>n", ":bn<cr>")
 vim.keymap.set("n", "<leader>p", ":bp<cr>")
 vim.keymap.set("n", "<leader>x", ":bd<cr>")
+-- do :%bd to close all buffers
 
 --window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v")
@@ -48,14 +54,10 @@ vim.keymap.set("", "<leader>/", ":CommentToggle<cr>")
 --["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },     
 --["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" }, 
 --
---cmp
---["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion     
---["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion         
---["<C-b>"] = cmp.mapping.scroll_docs(-4),                               
---["<C-f>"] = cmp.mapping.scroll_docs(4),                                
---["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions 
---["<C-e>"] = cmp.mapping.abort(), -- close completion window            
---["<CR>"] = cmp.mapping.confirm({ select = false }),                    
+--blink
+-- <c-y> to accept
+-- ['<C-k>'] = { 'select_prev', 'fallback' },
+-- ['<C-j>'] = { 'select_next', 'fallback' },
 --
 --
 --
