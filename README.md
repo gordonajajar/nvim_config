@@ -36,7 +36,7 @@ Install WSL2(Windows Subsystem for Linux) and follow the Linux instructions.
 
 ## Required Dependencies
 - gcc/clang
-- [ripgrep](https://github.com/BurntSushi/riprep) (for telescope fuzzyfinder)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) (for telescope fuzzyfinder)
 - [Nerd Fonts](https://www.nerdfonts.com/) - e.g JetBrainsMono: 
 > ```sh
 > wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip 
@@ -60,7 +60,7 @@ git clone https://github.com/gordonajajar/nvim_config.git ~/.config/nvim
 General keymaps can be found in core/keymaps.lua. Plugin-specific keymaps are defined in individual plugin files in plugins/, but are
 also displayed in core/keymaps.lua.
 
-## Acknowledgement
+## Acknowledgements
 - [Lazy.nvim](https://github.com/folke/lazy.nvim)
 - [sadiksaifi](https://github.com/sadiksaifi)
 

@@ -1,6 +1,8 @@
 
 --leader key is space
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+vim.diagnostic.config({ virtual_text = true })
 
 -- LAZY PLUGIN MANAGER:
 -- do :Lazy
@@ -32,6 +34,8 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<cr>")
 --comment
 vim.keymap.set("", "<leader>/", ":CommentToggle<cr>")
 
+vim.keymap.set("n", "g0", ":Neorg toc<cr>")
+
 
 --PLUGIN-SPECIFIC KEYMAPS (defined in individual .luas in plugins/):
 --
@@ -59,9 +63,18 @@ vim.keymap.set("", "<leader>/", ":CommentToggle<cr>")
 -- ['<C-k>'] = { 'select_prev', 'fallback' },
 -- ['<C-j>'] = { 'select_next', 'fallback' },
 --
+--neorg
+-- * for headers
+-- <z-a> to collapse headers
+-- Bold: *bold*
+-- Italics: /italics/
+-- Underline: _underline_
+-- Strikethrough: -strikethrough-
+-- Link to file: {:filename:}
+-- Unordered list: - item
 --
---
---
+-- Go to default workspace: :Neorg index
+-- Close all open norg files: :Neorg return
 --
 --
 --

@@ -9,7 +9,19 @@ return {
         "williamboman/mason-lspconfig.nvim",
         dependencies = { "mason.nvim" },
         config = function()
-            require("mason-lspconfig").setup()
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    "lua_ls",
+                    "pylsp",
+                    "ts_ls",
+                    "html",
+                    "cssls",
+                    "tailwindcss",
+                    "vimls",
+                    "arduino_language_server",
+                },
+                automatic_installation = true,
+            })
         end,
     },
     {
@@ -21,9 +33,10 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         config = function()
+            ---@diagnostic disable-next-line: missing-fields
             require("nvim-treesitter.configs").setup({
                 -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-                ensure_installed = { "javascript", "tsx", "typescript", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+                ensure_installed = { "norg", "javascript", "tsx", "typescript", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
 
                 -- Install parsers synchronously (only applied to `ensure_installed`)
                 sync_install = false,
