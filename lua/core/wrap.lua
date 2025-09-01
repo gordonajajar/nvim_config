@@ -1,3 +1,4 @@
+-- Toggle line wrapping with <leader>w
 
 local wrap_enabled = false
 

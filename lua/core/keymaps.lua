@@ -9,7 +9,7 @@ vim.diagnostic.config({ virtual_text = true })
 
 --NONE PLUGIN SPECIFIC PLUGINS:
 
---TOGGLE WRAP: <c-w>
+--leader-w to toggle wrap
 
 --bufferline
 vim.keymap.set("n", "<leader>n", ":bn<cr>")
@@ -34,8 +34,11 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<cr>")
 --comment
 vim.keymap.set("", "<leader>/", ":CommentToggle<cr>")
 
+--neorg, go to table of contents
 vim.keymap.set("n", "g0", ":Neorg toc<cr>")
 
+--open diagnostic
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
 
 --PLUGIN-SPECIFIC KEYMAPS (defined in individual .luas in plugins/):
 --

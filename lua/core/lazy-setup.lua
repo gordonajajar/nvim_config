@@ -16,4 +16,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Add plugins
-require("lazy").setup("plugins")
+require("lazy").setup({
+  spec = { import = "plugins" },
+  rocks = {
+    hererocks = true, -- for magick/image.nvim to work properly
+  },
+})

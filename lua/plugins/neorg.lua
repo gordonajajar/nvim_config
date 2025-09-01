@@ -10,7 +10,7 @@ return {
                     ["core.concealer"] = {
                         config = {
                             icon_preset = "diamond",
-                        }
+                        },
                     }, 
                     ["core.dirman"] = { --Manages workspaces
                         config = {
