@@ -11,6 +11,7 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 ensure_installed = {
+                    "verible",
                     "lua_ls",
                     "pylsp",
                     "ts_ls",
@@ -20,8 +21,21 @@ return {
                     "vimls",
                     "arduino_language_server",
                 },
+                automatic_enable = {
+                    exclude = {
+                        "verible",
+                    }
+                },
                 automatic_installation = true,
             })
+
+            -- -- Manually setup verible LSP, for rules config search flag
+            local lspconfig = require("lspconfig")
+
+            lspconfig.verible.setup({
+                cmd = { "verible-verilog-ls", "--rules_config_search" },
+            })
+
         end,
     },
     {
